@@ -1,0 +1,28 @@
+:root {
+    --background: hsl(257, 30%, 14%);
+    --main-text: hsl(0, 0%, 96%);
+    --main-text05: hsla(0, 0%, 96%, 0.5);
+    --text-colorWhite: hsl(0, 0%, 100%);
+    --wrapper-start: hsl(265, 29%, 16%); 
+    --wrapper-end: hsla(265, 29%, 16%, 0.2);
+    --line-start: rgba(217, 217, 217, 0);
+    --line-end: rgba(255, 255, 255, 0);
+    --choosenLine-start: rgba(255, 88, 95, 0);
+    --choosenLine-middle: hsl(337, 94%, 66%);
+    --choosenLine-end: rgba(255, 88, 95, 0);
+    --label-color: hsl(0, 0%, 72%);
+    --input-bg: hsl(255, 28%, 20%);
+    --input-border: hsla(357, 100%, 67%, 0.35);
+    --button-bgStart: hsl(357, 100%, 67%);
+    --button-bgHoverStart: hsl(357, 54%, 49%);
+    --button-bgEnd: hsl(337, 94%, 66%);
+    --currency-border: hsl(337, 94%, 66%);
+    --button-bgHoverEnd: hsl(337, 56%, 45%);
+    --item-bg: hsl(255, 29%, 14%);
+    --icon-pink: hsl(344, 96%, 66%);
+    --icon-pinkBorder: hsla(344, 96%, 66%, 0.25);
+    --icon-green: hsl(172, 73%, 45%);
+    --icon-greenBorder: hsla(172, 73%, 45%, 0.25);
+    --single-bg: hsl(228, 100%, 76%);
+    --single-text: hsl(255, 28%, 20%);
+}   

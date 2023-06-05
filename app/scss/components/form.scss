@@ -1,0 +1,15 @@
+@use '../util/' as *;
+
+.form {
+    margin-top: rem(40);
+
+    label {
+        display: block;
+        font-weight: 400;
+        font-size: rem(13);
+        line-height: rem(16);
+        color: var(--label-color);
+        margin-bottom: rem(10);
+        padding-left: rem(16);
+    }
+}

@@ -1,0 +1,115 @@
+@use '../util/' as *;
+
+.currency-wrapper {
+    margin-top: rem(40);
+
+    &-single {
+        position: relative;
+
+        .currency-item {
+            height: rem(69);
+        }
+
+        .select {
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: rem(10);
+            width: calc(100% - 20px);
+            max-width: rem(290);
+        }
+
+        &.active {
+            .currency-button {
+                display: none;
+            }
+
+            .select {
+                display: block;
+            }
+        }
+
+        
+    }
+}
+
+.currency-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    border-radius: rem(12);
+    padding: rem(14) rem(20);
+    border: rem(2) solid var(--currency-border);
+    background: none;
+}
+
+.currency-titles {
+    @include flex(start);
+    column-gap: rem(19);
+}
+
+.currency-title {
+    font-weight: 600;
+    line-height: rem(19);
+    color: var(--text-colorWhite);
+    min-width: rem(40);
+}
+
+.currency-full {
+    font-weight: 400;
+    line-height: rem(15);
+    color: var(--main-text05);
+    min-width: rem(40);
+    font-size: rem(12);
+}
+
+.currency-amount {
+    text-align: center;
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: rem(22);
+}
+
+.currency-action {
+    text-align: right;
+}
+
+.currency-current {
+    border: none;
+    background: var(--single-bg);
+
+    .currency-full {
+        color: var(--single-text);
+    }
+}
+
+.currency-wrapper {
+    &__list {
+        @include flex;
+        margin-top: rem(30);
+        flex-direction: column;
+        row-gap: rem(8);
+    }
+}
+
+.currency-button {
+    border: 1px solid var(--main-text05);
+    border-radius: rem(8);
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: rem(15);
+    color: var(--main-text05);
+    width: max-content;
+    padding: rem(10) rem(24);
+    cursor: pointer;
+    transition: border 0.25s, color 0.25s;
+    text-transform: capitalize;
+
+
+    &:hover {
+        color: var(--text-colorWhite);
+        border: 1px solid var(--text-colorWhite);
+    }
+}

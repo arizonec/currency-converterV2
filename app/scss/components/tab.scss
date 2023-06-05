@@ -1,0 +1,38 @@
+@use '../util/' as *;
+
+.tab {
+    @include flex;
+    cursor: pointer;
+    column-gap: rem(10);
+    padding: rem(15) rem(10);
+    opacity: 0.5;
+    transition: opacity 0.25s ease;
+    position: relative;
+
+    &:after {
+        background: linear-gradient(90deg, var(--choosenLine-start) 0%, var(--choosenLine-middle) 51.57%, var(--choosenLine-end) 100%);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: rem(2);
+        transition: width 0.25s ease;
+    }
+
+    &-icon {
+        width: rem(18);
+        height: rem(18);   
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &.active {
+        opacity: 1;
+
+        &:after {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use '../util/' as *;
+
+
+.main {
+    width: 100%;
+    position: relative;
+
+    &:before {
+        width: rem(220);
+        height: rem(220);
+        bottom: 0;
+        left: rem(-160);
+        background: url(../images/bitcoin.png) no-repeat center/contain;
+        z-index: -1;
+        transform: rotate(-10deg);
+        @include breakpoint-down(medium) {
+            display: none;
+        }
+    }
+    
+    &:after {
+        width: rem(144);
+        height: rem(144);
+        top: rem(-72);
+        right: 0;
+        transform: rotate(10deg);
+        background: url(../images/ethereum.png) no-repeat center/contain;
+        @include breakpoint-down(medium) {
+            display: none;
+        }
+    }
+}

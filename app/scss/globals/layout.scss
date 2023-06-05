@@ -1,0 +1,16 @@
+@use '../util/' as *;
+
+.container {
+    width: rem(1024);
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    @include flex;
+    flex-direction: column;
+    row-gap: rem(28);
+
+    @include breakpoint-down(medium) {
+        width: 100%;
+        padding: 0 rem(5);
+    }
+}

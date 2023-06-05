@@ -1,0 +1,1 @@
+.rate-information{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;font-weight:400;font-size:.75rem;line-height:.9375rem;color:var(--main-text05)}@media(max-width: 39.9375em){.rate-information{flex-direction:column;gap:.625rem}}.rate-information__convertion{color:var(--text-colorWhite)}/*# sourceMappingURL=rate.css.map */

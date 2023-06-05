@@ -1,0 +1,160 @@
+@use '../util/' as *;
+
+.form-info {
+    @include flex(space-between);
+    margin-top: rem(25);
+    position: relative;
+
+    @include breakpoint-down(medium) {
+        flex-direction: column;
+        gap: rem(20);
+        margin-top: rem(20);
+    }
+
+    &__submit {
+       @include button; 
+
+       @include breakpoint-down(medium) {
+            order: -1;
+            margin: 0 auto;
+        }
+    }
+
+    &__results {
+        @include flex;
+        column-gap: rem(15);
+        opacity: 0;
+
+        @include breakpoint-down(medium) {
+            width: 100%;
+        }
+
+        @include breakpoint-down(small) {
+            flex-direction: column;
+            gap: rem(10);
+        }
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    &__result-equals {
+        @include flex;
+        background: var(--input-bg);
+        border-radius: 50%;
+        width: rem(30);
+        height: rem(30);
+    }
+
+    &__result-item {
+        background: var(--item-bg);
+        border-radius: rem(12);
+        padding: rem(12);
+        align-items: center;
+        display: grid;
+        column-gap: rem(8);
+        width: max-content;
+        grid-template-columns: rem(34) 1fr;
+        grid-template-areas: 'icon titles' 'icon amount';
+
+        @include breakpoint-down(medium) {
+            flex-grow: 1;
+            width: max-content;
+        }
+
+        @include breakpoint-down(small) {
+            width: 100%;
+        }
+
+        &.from {
+            .icon {
+                background: var(--icon-pink);
+                box-shadow: 0 0 0 rem(2) var(--icon-pinkBorder); 
+            }
+        }
+
+        &.to {
+            .icon {
+                background: var(--icon-green);
+                box-shadow: 0 0 0 rem(2) var(--icon-greenBorder); 
+            }
+        }
+
+        .icon {
+            @include flex;
+            grid-area: icon;
+            border-radius: 50%;
+            width: rem(30);
+            height: rem(30);
+        }
+    }
+
+    .from__titles {
+        @include flex(start);
+        grid-area: titles;
+        column-gap: rem(10);
+
+        @include breakpoint-down(medium) {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: rem(14);
+            color: var(--text-colorWhite);
+            line-height: rem(17);
+        }
+
+        &-full {
+            font-weight: 400;
+            font-size: rem(12);
+            line-height: rem(15);
+            color: var(--main-text05);
+        }
+    }
+
+    .to__titles {
+        @include flex(start);
+        grid-area: titles;
+        column-gap: rem(10);
+
+        @include breakpoint-down(medium) {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: rem(14);
+            color: var(--text-colorWhite);
+            line-height: rem(17);
+        }
+
+        &-full {
+            font-weight: 400;
+            font-size: rem(12);
+            line-height: rem(15);
+            color: var(--main-text05);
+        }
+    }
+
+    .from__amount {
+        grid-area: amount;
+        font-weight: 700;
+        font-size: rem(19);
+        line-height: rem(23);
+        color: var(--text-colorWhite);
+        margin-top: rem(6);
+    }
+
+    .to__amount {
+        grid-area: amount;
+        font-weight: 700;
+        font-size: rem(19);
+        line-height: rem(23);
+        color: var(--text-colorWhite);
+        margin-top: rem(6);
+    }
+}

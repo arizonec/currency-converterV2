@@ -1,0 +1,12 @@
+@use '../util/' as *;
+
+.select {
+    @include input;
+    cursor: pointer;
+    min-width: rem(240);
+
+    
+    @include breakpoint-down(small) {
+        min-width: 100%;
+    }
+}

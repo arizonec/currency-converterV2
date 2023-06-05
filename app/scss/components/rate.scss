@@ -1,0 +1,19 @@
+@use '../util/' as *;
+
+.rate-information {
+    @include flex(space-between);
+    margin-top: rem(16);
+    font-weight: 400;
+    font-size: rem(12);
+    line-height: rem(15);
+    color: var(--main-text05);
+
+    @include breakpoint-down(small) {
+        flex-direction: column;
+        gap: rem(10);
+    }
+
+    &__convertion {
+        color: var(--text-colorWhite);
+    }
+}

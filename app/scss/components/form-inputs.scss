@@ -1,0 +1,61 @@
+@use '../util/' as *;
+
+.form-inputs {
+    @include flex;
+    gap: rem(25);
+
+    @include breakpoint-down(medium) {
+        min-width: unset;
+        flex-direction: column;
+    }
+
+    &__group {
+        width: rem(320);
+        
+        @include breakpoint-down(small) {
+            width: 100%;
+        }
+
+        input {
+            @include input;
+            width: 100%;
+        }
+    }
+
+    &__selects {
+        @include flex;
+        column-gap: rem(25);
+        align-items: flex-end;
+
+        @include breakpoint-down(small) {
+            flex-direction: column;
+            align-items: center;
+            gap: rem(10);
+            min-width: 100%;
+        }
+
+        &-select {
+            flex-grow: 1;
+
+            @include breakpoint-down(small) {
+                margin-bottom: rem(10);
+                min-width: 100%;
+            }
+        }
+
+        &-icon {
+            @include flex;
+            background: var(--input-bg);
+            width: rem(52);
+            height: rem(52);
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.25s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use '../util/functions.scss' as *;
+
+@mixin flex($justify: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin input {
+    border-radius: rem(12);
+    background: var(--input-bg);
+    font-weight: 600;
+    line-height: rem(19);
+    color: var(--main-text);
+    border: rem(2) solid var(--input-border);
+    padding: rem(14);
+}
+
+@mixin button {
+    background: linear-gradient(97.46deg, var(--button-bgStart) 3.28%, var(--button-bgEnd) 95.35%);
+    border-radius: rem(12);
+    font-size: rem(17);
+    line-height: rem(21);
+    color: ver(--text-colorWhite);
+    padding: rem(12) rem(30);
+    cursor: pointer;
+    margin-left: auto;
+
+    &:hover {
+        background: linear-gradient(97.46deg, var(--button-bgHoverStart) 3.28%, var(--button-bgHoverEnd) 95.35%);
+    }
+}
+ 

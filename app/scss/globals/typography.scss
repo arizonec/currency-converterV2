@@ -1,0 +1,16 @@
+@use '../util/' as *;
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: rem(22);
+    color: var(--text-colorWhite);
+    margin: 0;
+    line-height: rem(27);
+    font-weight: 700;
+
+    @include breakpoint-down(medium) {
+       font-size: rem(17);
+       line-height: rem(24);
+    }
+}

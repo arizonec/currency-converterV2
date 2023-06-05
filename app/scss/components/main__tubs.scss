@@ -1,0 +1,21 @@
+@use '../util/' as *;
+
+.main__tabs {
+    @include flex;
+    position: relative;
+
+    &:before {
+        background: linear-gradient(90deg, var(--line-start) 12.5%, var(--text-colorWhite) 51.57%, var(--line-end) 86.98%);
+        opacity: 0.2;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        min-width: rem(660);
+        height: rem(2);
+        @include breakpoint-down(medium) {
+            min-width: unset;
+            width: 100%;
+        }
+    }
+}
